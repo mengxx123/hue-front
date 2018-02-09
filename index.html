@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>主页 | DC Palette</title>
+    <meta name="keywords" content="色彩,色相,彩度,明度,rgb,hsv,lab">
+    <link rel="icon" href="favcion.ico" sizes="32x32" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+</head>
+
+<body>
+
+<div class="container">
+    <div class="main-container">
+        <div class="main-paint">
+
+            <div class="main-panel">
+                <div class="hue-input">
+                    <div class="hue-textArea"><span>色相数</span>
+                        <input id="hue-input-text" type="text" value="12" min="8" max="20" step="1"></input><br></div>
+                    <input id="hue-input-range" type="range" value="12" min="8" max="20" step="1"></input>
+                </div>
+                <div class="sat-input">
+                    <div class="sat-textArea"><span>彩度</span>
+                        <input id="sat-input-text" type="text" value="100" min="0" max="100" step="1"></input><br></div>
+                    <input id="sat-input-range" type="range" value="100" min="0" max="100" step="1"></input>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="mycanvas" width="500" height="500"></canvas>
+            </div>
+        </div>
+
+        <div class="main-value">
+            <div class="color-space-title">
+                <img src="./img/colorspace.png"></img>
+            </div>
+            <div class="color-value">
+                <span class="value-title">Current Color</span>
+                <span id="cur-color" class="value-num"></span>
+            </div>
+            <div class="color-value">
+                <span class="value-title">Hex</span>
+                <span id="hex-value" class="value-num"></span>
+            </div>
+            <div class="color-value">
+                <span class="value-title">RGB</span>
+                <span id="rgb-value" class="value-num"></span>
+            </div>
+            <div class="color-value">
+                <span class="value-title">HSL</span>
+                <span id="hsl-value" class="value-num"></span>
+            </div>
+            <div class="color-value">
+                <span class="value-title">HSB(HSV)</span>
+                <span id="hsb-value" class="value-num"></span>
+            </div>
+            <div class="color-value">
+                <span class="value-title">CMYK</span>
+                <span id="cmy-value" class="value-num"></span>
+            </div>
+            <div class="color-value">
+                <span class="value-title">Lab</span>
+                <span id="lab-value" class="value-num"></span>
+            </div>
+            <div class="color-value">
+                <span class="value-title">XYZ</span>
+                <span id="xyz-value" class="value-num"></span>
+            </div>
+            <!--
+            <div class="color-value">
+                <span class="value-title">Luv</span>
+                <span id="luv-value" class="value-num"></span>
+            </div>
+            <div class="color-value">
+                <span class="value-title">Yxy</span>
+                <span id="yxy-value" class="value-num"></span>
+            </div>
+            -->
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/d3.v4.min.js"></script>
+<script src="js/converter.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
